@@ -6,10 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     public float power = 10;
     public Rigidbody rigidbody;
+    private Vector3 respawnPoint;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        respawnPoint = transform.position;
+        rigidbody = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
